@@ -1,21 +1,27 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <h1><u> Covid-19 Statistics</u></h1>
    <div class = "main">
         <form  id = "query-form" name="Form" onsubmit="return validateForm()">
             <input type="text"  id = "country" name="countryName" placeholder="country">
             <input type = "date" id="start" name="startDate">
             <input type = "date" id="end" name="endDate">
-        
-    
-         <input type="submit" value="submit" style="background-color:blue">
+         
+            <button class="btn btn-info" onClick="showData()">Submit</button>
            
         </div>
         </form>
-        <div class="wrapper">
-            
+        <div id="wrapper">
+            <h4>Confirmed Cases:<span id="confirmed"></span> </h4>
+            <h4>Active Cases: <span id="active"></span></h4>
+            <h4>Death Cases: <span id="deaths"></span> </h4>
         </div>
         <script src="script.js"></script>
     </body>
