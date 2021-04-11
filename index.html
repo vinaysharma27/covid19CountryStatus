@@ -9,20 +9,21 @@
     <body>
         <h1><u> Covid-19 Statistics</u></h1>
    <div class = "main">
-        <form  id = "query-form" name="Form" onsubmit="return validateForm()">
-            <input type="text"  id = "country" name="countryName" placeholder="country">
-            <input type = "date" id="start" name="startDate">
-            <input type = "date" id="end" name="endDate">
+        <form  id = "form" name="Form">
+            <input type="text"  id = "country" name="countryName" placeholder="country">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type = "date" id="start" name="startDate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type = "date" id="end" name="endDate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          
             <button class="btn btn-info" onClick="showData()">Submit</button>
-           
         </div>
+      
         </form>
         <div id="wrapper">
-            <h4>Confirmed Cases:<span id="confirmed"></span> </h4>
-            <h4>Active Cases: <span id="active"></span></h4>
-            <h4>Death Cases: <span id="deaths"></span> </h4>
+            <h4><b>Confirmed Cases </b>:<span id="confirmed"></span> </h4>
+            <h4><b>Active Cases </b>: <span id="active"></span></h4>
+            <h4><b>Death Cases </b>: <span id="deaths"></span> </h4>
         </div>
+
         <script src="script.js"></script>
     </body>
 </html>

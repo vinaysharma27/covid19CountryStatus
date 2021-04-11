@@ -1,10 +1,3 @@
-function validateForm() {
-    var x = document.forms["Form"]["countryName"].value;
-    if (x == "") {
-      alert("Field is empty");
-      return false;
-    }
-}
 
 function showData()
 {
@@ -17,14 +10,14 @@ function showData()
     var active=document.getElementById("active");
     var deaths=document.getElementById("deaths");
 
-    console.log(sDate);
+    console.log(start);
 
-    if(country=='' || sDate=='' || eDate=='')
-    alert("enter the required field");
+    if(country=='' || start=='' || end=='')
+    alert("Field is empty");
 
     else
     {
-        var url="https://api.covid19api.com/country/"+country+"?from="+sDate+"T00:00:00Z&to="+eDate+"T00:00:00Z";
+        var url="https://api.covid19api.com/country/"+country+"?from="+start+"T00:00:00Z&to="+end+"T00:00:00Z";
 
         fetch(url)
         .then((wrapper) => wrapper.json())
